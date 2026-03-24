@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Secrète</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f4; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        input { padding: 10px; width: 250px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+        button { padding: 10px 25px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Entrez la phrase précise :</h2>
+        <input type="text" id="phraseInput" placeholder="Tapez ici...">
+        <button onclick="verifier()">Accéder à la photo</button>
+    </div>
+
+    <script>
+        function verifier() {
+            // REMPLACE CI-DESSOUS : "la phrase" et "le lien de la photo"
+            const phraseSecrete = "j'aspire à rencontrer un homme d'esprit et pas uniquement de corps histoire de lâcher prise et de pouvoir poser mon cerveau"; 
+            const lienPhoto = "https://ibb.co/wFb0nygk"; 
+
+            const saisie = document.getElementById('phraseInput').value.toLowerCase().trim();
+            
+            if (saisie === phraseSecrete) {
+                window.location.href = lienPhoto;
+            } else {
+                alert("Phrase incorrecte !");
+            }
+        }
+    </script>
+</body>
+</html>
